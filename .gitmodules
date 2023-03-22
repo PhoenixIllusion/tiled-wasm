@@ -1,0 +1,4 @@
+[submodule "tiled-src"]
+	path = tiled-src
+	url = git@github.com:mapeditor/tiled.git
+	shallow = true
