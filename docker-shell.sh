@@ -3,4 +3,4 @@ docker run \
   --name qt-webassembly \
   --mount type=bind,source="$(pwd)/tiled-src",target=/tiled-src/ \
   --mount type=bind,source="$(pwd)/cmake",target=/cmake/ \
-  phoenixillusion/qt6:6.5-wasm-multithread-aqt /bin/bash /cmake/cmake.sh
+  phoenixillusion/qt6:6.5-wasm-multithread-aqt /bin/bash
