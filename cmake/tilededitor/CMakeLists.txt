@@ -20,7 +20,6 @@ INCLUDE_DIRECTORIES(
   ${Qt6OpenGLWidgets_INCLUDE_DIRS}
   ${SOURCE_DIR}
 )
-message(CHECK_START "Paths - libtiled_PATH - ${libtiled_PATH}")
 
 add_compile_definitions(
     "TILED_EDITOR_LIBRARY"
@@ -296,8 +295,9 @@ SET(SOURCE_FILES
 string(REGEX REPLACE "([^;]+)" "${SOURCE_DIR}/\\1" SOURCE_FILES "${SOURCE_FILES}")
 qt_add_library(${TARGET_NAME} STATIC
         ${SOURCE_FILES}
+        command.cpp
 )
-
+target_compile_options(${TARGET_NAME} PUBLIC "-pthread")
 set_target_properties(${TARGET_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON

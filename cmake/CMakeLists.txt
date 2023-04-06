@@ -13,3 +13,5 @@ add_subdirectory(./translations)
 add_subdirectory(./qtpropertybrowser)
 add_subdirectory(./qtsingleapplication)
 add_subdirectory(./tilededitor)
+
+add_subdirectory(./tiledapp)

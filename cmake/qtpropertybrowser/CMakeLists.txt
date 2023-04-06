@@ -27,6 +27,7 @@ qt_add_library(${TARGET_NAME} STATIC
         ${SOURCE_FILES}
 )
 
+target_compile_options(${TARGET_NAME} PUBLIC "-pthread")
 set_target_properties(${TARGET_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
